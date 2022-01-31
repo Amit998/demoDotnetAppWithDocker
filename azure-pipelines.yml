@@ -56,31 +56,9 @@ stages:
         repository: 'testcontainer'
         command: 'push'
       displayName: 'Docker Image Push'
+    - task: AzureWebAppContainer@1
+      inputs:
+        azureSubscription: 'az-cloud-conn'
+        appName: 'testWebAppUsingDocker'
+        containers: 'testcontainerregbyamit.azurecr.io/testcontainerregbyamit:$(Build.BuildId)'
 
-# - stage: Deploy
-#   displayName: Deploy
-#   jobs:
-#   - job: Deploy
-#     displayName: Deploy
-#     pool:
-#       vmImage: $(vmImageName)
-#     steps:
-#     - task: CopyFiles@2
-#       inputs:
-#         SourceFolder: '$(Build.ArtifactStagingDirectory)/drop'
-#         Contents: '**'
-#         TargetFolder: '$(System.DefaultWorkingDirectory)/drop'
-#     - task: CmdLine@2
-#       inputs:
-#         workingDirectory: '$(System.DefaultWorkingDirectory)/drop'
-#         script: 'dir'
-  
-#     - task: AzureWebAppContainer@1
-#       inputs:
-#         azureSubscription: 'az-conn'
-#         appName: 'testWebAppUsingDocker'
-#         containers: 'testcontainerregbyamit.azurecr.io/testcontainerregbyamit:$(Build.BuildId)'
-  
-    
-    
-    
