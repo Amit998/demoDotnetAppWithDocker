@@ -50,12 +50,12 @@ stages:
         command: 'build'
         Dockerfile: '**/Dockerfile'
       displayName: 'Docker Image Build'
-#     - task: Docker@2
-#       inputs:
-#         containerRegistry: 'acr_conn'
-#         repository: 'testcontainer'
-#         command: 'push'
-#       displayName: 'Docker Image Push'
+    - task: Docker@2
+      inputs:
+        containerRegistry: 'acr_conn'
+        repository: 'testcontainer'
+        command: 'push'
+      displayName: 'Docker Image Push'
 
 # - stage: Deploy
 #   displayName: Deploy
