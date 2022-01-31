@@ -48,6 +48,6 @@ stages:
     - task: AzureWebAppContainer@1
       inputs:
         azureSubscription: 'az-cloud-conn'
-        appName: 'testWebAppUsingDocker'
+        appName: 'DotNetContainerApp'
         containers: 'testcontainerregbyamit.azurecr.io/testcontainerregbyamit:$(Build.BuildId)'
 
