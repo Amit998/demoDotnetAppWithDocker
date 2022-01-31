@@ -28,17 +28,6 @@ stages:
     pool:
       vmImage: $(vmImageName)
     steps:
-    # - task: CopyFiles@2
-    #   inputs:
-    #     SourceFolder: '$(agent.builddirectory)'
-    #     Contents: '**'
-    #     TargetFolder: '$(Build.ArtifactStagingDirectory)'
-    #     CleanTargetFolder: true
-    # - task: PublishBuildArtifacts@1
-    #   inputs:
-    #     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    #     ArtifactName: 'drop'
-        # publishLocation: 'Container'
     - task: Docker@2
       inputs:
         containerRegistry: 'acr_conn'
