@@ -63,5 +63,5 @@ stages:
       inputs:
         azureSubscription: 'az-cloud-conn'
         appName: 'DotNetContainerApp'
-        containers: 'testcontainerregbyamit.azurecr.io/testcontainerregbyamit:$(tag)'
+        containers: 'testcontainerregbyamit.azurecr.io/testcontainerregbyamit:latest'
 
