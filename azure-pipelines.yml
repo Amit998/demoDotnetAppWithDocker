@@ -18,7 +18,7 @@ variables:
   tag: 'latest'
   dockerRegistryServiceConnection: 'acr_conn'
   azureSubscription : 'az-cloud-conn'
-  appName: 'DotNetContainerApp'
+  appName: 'myNewWebAppForDocker'
 
 
   # Agent VM image name
