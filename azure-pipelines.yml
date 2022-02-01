@@ -64,7 +64,7 @@ stages:
       displayName: 'Azure Web App on Container Deploy'
       inputs:
         azureSubscription: az-cloud-conn
-        appName: DotNetContainerApp
+        appName: myNewWebAppForDocker
         containers: assignmentforcbre.azurecr.io/testcontainer:latest
 
 
