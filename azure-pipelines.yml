@@ -63,9 +63,9 @@ stages:
     - task: AzureWebAppContainer@1
       displayName: 'Azure Web App on Container Deploy'
       inputs:
-        azureSubscription: 'az-cloud-conn'
-        appName: 'DotNetContainerApp'
-        containers: 'assignmentforcbre.azurecr.io/testcontainer:latest'
+        azureSubscription: az-cloud-conn
+        appName: DotNetContainerApp
+        containers: assignmentforcbre.azurecr.io/testcontainer:latest
 
 
   
